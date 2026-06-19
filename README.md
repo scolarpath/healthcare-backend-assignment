@@ -4,15 +4,16 @@ A Django REST Framework (DRF) backend API for managing patient records with secu
 
 ✨ Key Features
 
-#🔐 Secure user authentication required
+Secure user authentication required
 
-🧾 Full CRUD operations for patient records
+ Full CRUD operations for patient records
 
-#👤 User-specific data isolation (each user sees only their data)
+ User-specific data isolation (each user sees only their data)
 
-⚡ RESTful APIs built using Django REST Framework
+ RESTful APIs built using Django REST Framework
 
-🛡️ Protected endpoints using permissions
+ Protected endpoints using permissions
+
 
 
 🛠️ Tech Stack
@@ -24,6 +25,7 @@ Django
 Django REST Framework
 
 SQLite
+
 
 
 ⚙️ Project Setup
@@ -39,12 +41,18 @@ pip install -r requirements.txt
 python manage.py migrate
 5. Start Server
 python manage.py runserver
+
+
 🔐 Authentication
 
 All endpoints require authentication.
 
+
 Header Format:
+
 Authorization: Token <your_token>
+
+
 📡 API Endpoints
 Auth
 POST /api/login/
@@ -55,6 +63,8 @@ POST /api/patients/
 GET /api/patients/{id}/
 PUT /api/patients/{id}/
 DELETE /api/patients/{id}/
+
+
 👩‍💻 Author
 
 Srushti Kolawale
