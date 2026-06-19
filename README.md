@@ -1,112 +1,44 @@
-# Healthcare Backend API
+Healthcare Backend Assignment
 
-## Overview
+A Django REST Framework (DRF) backend API for managing patient records with authentication and user-based access control.
 
-This project is a Healthcare Management Backend developed using Django REST Framework and PostgreSQL. It provides APIs for managing patients, doctors, and patient-doctor mappings with JWT authentication.
+ Features
+User authentication required
+Patient CRUD operations (Create, Read, Update, Delete)
+User-specific data access
+Secure REST APIs using Django REST Framework
+🛠️ Tech Stack
+Python
+Django
+Django REST Framework
+SQLite
+ Setup
+git clone https://github.com/scolarpath/healthcare-backend-assignment.git
+cd healthcare-backend-assignment
 
-## Features
-
-* User Registration
-* User Login using JWT Authentication
-* Patient Management
-* Doctor Management
-* Patient-Doctor Mapping
-* PostgreSQL Database Integration
-* Protected API Endpoints
-
-## Technologies Used
-
-* Python
-* Django
-* Django REST Framework
-* PostgreSQL
-* JWT Authentication (Simple JWT)
-* Postman
-
-## Installation
-
-### Clone the project
-
-```bash
-git clone <repository-url>
-cd healthcare_assignment
-```
-
-### Create Virtual Environment
-
-```bash
 python -m venv venv
-```
+venv\Scripts\activate   # Windows
 
-### Activate Virtual Environment
-
-```bash
-venv\Scripts\activate
-```
-
-### Install Dependencies
-
-```bash
 pip install -r requirements.txt
-```
 
-### Configure Environment Variables
-
-Create a `.env` file and add:
-
-```env
-SECRET_KEY=your_secret_key
-DEBUG=True
-
-DB_NAME=healthcare_db
-DB_USER=postgres
-DB_PASSWORD=your_password
-DB_HOST=localhost
-DB_PORT=5433
-```
-
-### Apply Migrations
-
-```bash
 python manage.py migrate
-```
-
-### Run Server
-
-```bash
 python manage.py runserver
-```
+Authentication
 
-## API Endpoints
+All APIs require login.
 
-### Authentication
+Header:
 
-* POST `/api/auth/register/`
-* POST `/api/auth/login/`
+Authorization: Token <your_token>
+ API Endpoints
+POST /api/login/
+POST /api/register/
+GET /api/patients/
+POST /api/patients/
+GET /api/patients/{id}/
+PUT /api/patients/{id}/
+DELETE /api/patients/{id}/
+Author
 
-### Patients
-
-* GET `/api/patients/`
-* POST `/api/patients/`
-
-### Doctors
-
-* GET `/api/doctors/`
-* POST `/api/doctors/`
-
-### Mappings
-
-* GET `/api/mappings/`
-* POST `/api/mappings/`
-
-## Authentication
-
-All protected endpoints require a JWT Access Token in the Authorization header:
-
-```text
-Bearer <access_token>
-```
-
-## Database
-
-PostgreSQL
+Srushti Kolawale
+GitHub: https://github.com/scolarpath
